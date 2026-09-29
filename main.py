@@ -36,20 +36,24 @@ def main():
             list_tasks(tasks)
 
         elif option == "3":
-            try:
-                task_id = int(input("ID de la tarea a completar: ").strip())
-                complete_task(tasks, task_id)
-                save_tasks(tasks)
-            except ValueError:
-                print("ID inválido. Debe ser un número.")
+
+            task_id = input(
+                "ID de la tarea a completar: "
+            ).strip()
+
+            complete_task(tasks, task_id)
+
+            save_tasks(tasks)
 
         elif option == "4":
-            try:
-                task_id = int(input("ID de la tarea a eliminar: ").strip())
-                delete_task(tasks, task_id)
-                save_tasks(tasks)
-            except ValueError:
-                print("ID inválido. Debe ser un número.")
+
+            task_id = input(
+                "ID de la tarea a eliminar: "
+            ).strip()
+
+            delete_task(tasks, task_id)
+
+            save_tasks(tasks)
 
         elif option == "5":
             save_tasks(tasks)
